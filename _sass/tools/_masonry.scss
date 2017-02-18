@@ -1,0 +1,128 @@
+.masonry {
+  list-style-type: none;
+  margin: -5vw 10vw 0 10vw;
+  .tile-layout,
+  .tile {
+    width: 100vw;
+    height: 100vh;
+    a {
+      text-decoration: none;
+    }
+    @include media($media-tablet) {
+      width: 40vw;
+      height: 40vh;
+      &.half {
+        width: 80vw;
+        height: 40vh;
+      }
+      &.full {
+        width: 80vw;
+        height: 50vw;
+      }
+    };
+    @include media($media-laptop) {
+      width: 20vw;
+      height: 20vw;
+      &.half {
+        width: 40vw;
+        height: 40vw;
+      };
+      &.full {
+        width: 80vw;
+        height: 50vw;
+      }
+    };
+  };
+  .tile-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    &.bottom {
+      background-position: bottom
+    };
+    &.wide {
+      background-size: cover;
+    };
+    &.tall {
+      background-size: contain;
+    };
+    &.tint-dark:after {
+      content: '';
+      position: absolute;
+      width: inherit;
+      height: inherit;
+      top: 0;
+      left: 0;
+      background: rgba(0, 0, 0, 0.5)
+    };
+    &.tint-light:after {
+      content: '';
+      position: absolute;
+      width: inherit;
+      height: inherit;
+      top: 0;
+      left: 0;
+      background: rgba(255, 255, 255, 0.5)
+    }
+  };
+  .tile-content {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding-left: 10%;
+    padding-right: 10%;
+    overflow: hidden;
+
+    &.light-text {
+      color: $light-color-text
+    };
+
+    &.dark-text {
+      color: $dark-color-text
+    };
+
+    h2 {
+      font: $section-title-font-weight #{$section-title-font-size * 1  } / #{$section-title-font-size * 1 } $section-title-font-family;
+      margin-top: 1rem
+    };
+    h3 {
+      font: $section-subtitle-font-weight #{$section-subtitle-font-size * .8  } / #{$section-subtitle-font-size * .8  } $section-subtitle-font-family;
+      margin-top: 5rem;
+      color: $brand-color;
+      text-transform: uppercase;
+    };
+    h4 {
+      font: $section-subtitle-font-weight #{$section-subtitle-font-size * .6  } / #{$section-subtitle-font-size * .6  } $section-subtitle-font-family;
+      color: $brand-color;
+      text-transform: uppercase;
+    };
+
+    @include media($media-tablet) {
+      h2 {
+        font: $section-title-font-weight #{$section-title-font-size * .9   } / #{$section-title-font-size * .9  } $section-title-font-family;
+      };
+      h3 {
+        font: $section-subtitle-font-weight #{$section-subtitle-font-size * .9 } / #{$section-subtitle-font-size * .9  } $section-subtitle-font-family;
+      };
+      h4 {
+        font: $section-subtitle-font-weight #{$section-subtitle-font-size * .6  } / #{$section-subtitle-font-size * .6  } $section-subtitle-font-family;
+      }
+    };
+
+    @include media($media-laptop) {
+      h2 {
+        font: $section-title-font-weight #{$section-title-font-size * 1.1  } / #{$section-title-font-size * 1.1  } $section-title-font-family;
+      };
+      h3 {
+        font: $section-subtitle-font-weight #{$section-subtitle-font-size * 1   } / #{$section-subtitle-font-size * 1 } $section-subtitle-font-family;
+      };
+      h4 {
+        font: $section-subtitle-font-weight #{$section-subtitle-font-size * .7  } / #{$section-subtitle-font-size * .7  } $section-subtitle-font-family;
+      }
+    }
+  }
+}

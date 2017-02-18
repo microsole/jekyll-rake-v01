@@ -1,0 +1,56 @@
+// Our variables
+$base-font-family: Helvetica, Arial, sans-serif !default;
+$base-font-size:   1.6rem !default;
+$base-font-weight: 400 !default;
+$small-font-size:  $base-font-size * 0.875 !default;
+$base-line-height: 1.5 !default;
+
+$section-font-family: Helvetica, Arial, sans-serif;
+$section-font-size:   1.6rem;
+$section-font-weight: 400;
+
+$section-title-font-family: Georgia, serif;
+$section-title-font-size:   4.5rem;
+$section-title-font-weight: 400;
+
+$section-subtitle-font-family: Helvetica, sans-serif;
+$section-subtitle-font-size:   1.8rem;
+$section-subtitle-font-weight: 300;
+
+$small-font-size:  1.4rem;
+$base-line-height: 1;
+
+$spacing-unit:     30px;
+
+$text-color:       #111;
+$background-color: #fdfdfd;
+$brand-color:      rgba(22, 179, 231, 1);
+$brand-color-2:     #E94E9C;
+$section-footer-color: #262626;
+
+$menu-overlay-color: rgba(22, 179, 231, 0.95);
+$menu-overylay-font: Georgia, serif;
+$header-color-light: #fdfdfd;
+$header-color-dark: #282C34;
+$section-color-dark: #282C34;
+$light-color-text: #fdfdfd;
+$footer-text-color: #eaeaea;
+$dark-color-text:  #333333;
+
+$grey-color:       #828282;
+$grey-color-light: lighten($grey-color, 40%);
+$grey-color-dark:  darken($grey-color, 25%);
+
+// Width of the content area
+$content-width:    800px;
+$on-palm:          600px;
+$on-laptop:        800px;
+
+// Import partials.
+@import
+  "vendor/vendor-lib",
+  "tools/tools-lib",
+  "base/base-lib",
+  "modules/modules-lib",
+  "pages/pages-lib"
+;

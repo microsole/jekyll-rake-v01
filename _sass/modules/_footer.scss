@@ -1,0 +1,90 @@
+.svg-social-icon {
+  fill: $footer-text-color;
+  height: 2.6rem;
+  width: 2.9rem;
+
+  &:hover {
+    fill: $brand-color
+  }
+
+}
+.site-footer {
+  min-height: 30rem;
+  padding: 6rem 6vw 8rem 6vw;
+  color: $footer-text-color;
+
+  .footer-logo-section {
+    width: 100%;
+    text-align: center;
+    padding: 2rem
+  }
+  .logo-image {
+    height: 8.4rem;
+    width: 20rem;
+    fill: $footer-text-color
+  }
+
+  ul {
+    list-style: none;
+    width: 100%;
+    text-align: center;
+    display: inline-block;
+
+    &.social-links {
+
+      margin: 0;
+      padding: 2rem;
+
+      li {
+        display: inline-block;
+        padding: 0.2rem;
+        margin: 0 1rem 0 1rem;
+        overflow: hidden;
+        cursor: pointer;
+
+        span {
+          display: block;
+          overflow: hidden;
+          height: 1px;
+          width: 1px;
+          margin: -1;
+        }
+      }
+
+    }
+
+    &.footer-links {
+
+      font-size: 1rem;
+      @include media($media-phone) {
+        font-size: 1.2rem
+      };
+      padding: 1rem;
+      margin-left: 0;
+      margin-right: 0;
+
+      li.copyright {
+        display: block;
+        margin-bottom: 2rem;
+        @include media($media-tablet) {
+          display: inline-block;
+          margin-bottom: inherit;
+          margin-right: 3.0rem
+        }
+      };
+
+      li.footer-link {
+        display: inline-block;
+      };
+
+      li.footer-link:nth-of-type(n+3):before {
+          content: '\00b7';
+          font-size: 2.0rem;
+          margin-right: 1.0rem;
+          margin-left: 1.0rem
+      }
+
+    }
+  }
+
+}

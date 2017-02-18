@@ -1,0 +1,137 @@
+/**
+ * Masthead Style
+ */
+ .masthead {
+     padding: 2.5rem;
+     width: 100%;
+     position: fixed;
+     top: 0;
+     left: 0;
+     z-index: 9999;
+     transition: transform 0.4s cubic-bezier(0.32, 0.01, 0, 1),color 0.2s cubic-bezier(0.32, 0.01, 0, 1),background-color 0s cubic-bezier(0.32, 0.01, 0, 1),padding 0.4s cubic-bezier(0.32, 0.01, 0, 1);
+     display: -ms-flexbox;
+     display: flex;
+     opacity: 1;
+     -ms-flex-align: center;
+     align-items: center;
+     -ms-flex-pack: justify;
+     justify-content: space-between;
+     -ms-transform: translateY(0%);
+     transform: translateY(0%);
+     pointer-events: none
+ }
+
+ .masthead-left {
+     -ms-flex-order: -1;
+     order: -1;
+     pointer-events: auto
+ }
+
+ .masthead-right {
+     pointer-events: auto
+ }
+
+.logo, .logo-image {
+  width: 11.25rem;
+  height: 4.725rem;
+}
+ .logo {
+     transition: all 0.1s cubic-bezier(0.32, 0.01, 0, 1);
+     margin-top: 0
+ }
+
+.menu-image-close {
+  opacity: 0
+}
+
+.menu-image.active .menu-image-close {
+  opacity: 1;
+  transition: opacity 0.5s
+}
+
+.menu-image.active .menu-image-open {
+  opacity: 0;
+  transition: opacity 0.5s
+}
+
+ .logo.light .logo-image, .menu-image.light {
+   fill: $header-color-light;
+   transition: fill 0.2s;
+ }
+ .logo.dark .logo-image, .menu-image.dark {
+   fill: $header-color-dark;
+   transition: fill 0.2s 0.8s;
+ }
+
+/**
+* Menu Hamburger Button
+*/
+.menuTrigger {
+    padding: 0;
+    display: inline-block;
+    cursor: pointer;
+    transition-property: opacity, -webkit-filter, opacity, filter;
+    transition-property: opacity, filter;
+    transition-duration: 0.15s;
+    transition-timing-function: linear;
+    height: 2.8rem;
+    width: 10rem
+}
+
+.menuTrigger:focus {
+    outline: none
+}
+
+.menuTrigger:hover {
+  -webkit-animation: pulse;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+.menuInstructions { /** Hide the menu text **/
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    position: absolute;
+    clip: rect(0 0 0 0);
+    overflow: hidden
+}
+
+
+
+ /**
+ * Masthead Media Breakpoints
+ */
+ @include media($media-phone) {
+   .logo, .logo-image {
+     width: 12.0rem;
+     height: 5.04rem
+   }
+   .menuTrigger, .menu-image {
+     width: 8.0rem;
+     height: 2.24rem
+   }
+ }
+
+ @include media($media-tablet) {
+   .logo, .logo-image {
+     width: 15.0rem;
+     height: 6.3rem
+   }
+   .menuTrigger, .menu-image {
+     width: 10.0rem;
+     height: 2.8rem
+   }
+   .masthead {
+     padding: 4rem
+   }
+ }
+
+@include media($media-laptop){
+    .masthead {
+      padding: 6rem
+    }
+}

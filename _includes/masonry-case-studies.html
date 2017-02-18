@@ -1,0 +1,15 @@
+<ul class="masonry" id="masonry-work" data-masonry='{ "columnWidth": ".tile-layout", "itemSelector": ".tile", "percentPosition": "true" }'>
+  <li class="tile-layout"></li>
+  {% for case-study in site.case-study %}
+  <li class="tile {{ case-study.tile-size }}">
+    <a href="{{ case-study.permalink }}">
+      <div class="tile-background bottom wide {{ case-study.tile-tint }}" style="background-image:url('{{ case-study.featured-image }}');"></div>
+      <div class="tile-content {{ case-study.tile-color }}" style="z-index:9">
+        <h4>Case Study</h4>
+        <h2>{{ case-study.title }}</h2>
+        <h3>Design &#183; API Development &#183; Social Media</h3>
+      </div>
+    </a>
+  </li>
+  {% endfor %}
+</ul>
