@@ -7,6 +7,11 @@
 
 #section-post-1 {
   background-color: $section-color-dark;
+
+  .section-post {
+    padding-top: 0;
+    padding-bottom: 20%;
+  }
   .section-background {
     position: fixed !important;
     top: 0;
@@ -17,7 +22,25 @@
     background-position: bottom;
     background-repeat: no-repeat;
     background-size: contain
-  }
+  };
+
+  &.light-text {
+    color: $light-color-text
+  };
+
+  &.dark-text {
+    color: $dark-color-text
+  };
+
+  h2.section-title {
+    font: $section-title-font-weight #{$section-title-font-size  } / #{$section-title-font-size * 1.15  } $section-title-font-family;
+    @include media($media-tablet) {
+      font: $section-title-font-weight #{$section-title-font-size * 1.5 } / #{$section-title-font-size * 1.15 * 1.5 } $section-title-font-family
+    };
+    @include media($media-laptop) {
+      font: $section-title-font-weight #{$section-title-font-size * 1.5 } / #{$section-title-font-size * 1.15 * 1.5 } $section-title-font-family
+    }
+  };
 };
 .section.brand-color {
   background: linear-gradient(
@@ -33,7 +56,7 @@
     to bottom,
     $brand-color-2 0%,
     $brand-color-2 50%,
-    $header-color-light 50%, 
+    $header-color-light 50%,
     $header-color-light 100%
   )
 };
@@ -157,6 +180,19 @@
       }
     }
 };
+
+.svg-word {
+  fill: $brand-color-2;
+  position: absolute;
+  bottom: 20vh;
+  width: 70vw;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  opacity: 0;
+  -webkit-transition: opacity 0.4s 0s;
+	transition: opacity 0.4s 0s
+}
 
 $colors: #eeeeee, rgba(22, 179, 231, 1), rgba(22, 179, 231, 1), rgba(22, 179, 231, 1), #ffffff;
 $max: 5;

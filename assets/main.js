@@ -7,6 +7,7 @@ var quietPeriod = 500;
 var animationTime = 1000;
 var mobScrollStart = 0;
 var mobScrollDelta = 0;
+var currentSVGWordIndex = 1;
 
 $(document).ready(function() {
     $('#fullpage').fullpage({
@@ -32,7 +33,7 @@ $(document).ready(function() {
         if(nextIndex == 3) {
           $('#masonry-work').masonry();
         };
-        
+
         if(nextIndex == 5) {
           $('#masonry-articles').masonry();
         };
@@ -75,17 +76,36 @@ $(document).ready(function() {
 
     });
 
+/*
     $('#section-post-1').mousemove(function(event) {
         $('#logo-animate').css('animation','stroke-offset 6s linear infinite');
         $('#logo-animate').css('animation-play-state','running');
         $('#section-post-1 .section-title a').css('visibility','visible');
     });
+*/
 
+    var wordScroll = setInterval(function() {
 
+      $('.svg-word:nth-of-type(' + currentSVGWordIndex + ')').css('opacity',0);
 
+      if ( currentSVGWordIndex == 5 ) {
+        currentSVGWordIndex = 1;
+      }
+      else {
+        currentSVGWordIndex = currentSVGWordIndex + 1;
+      };
+
+      $('.svg-word:nth-of-type(' + currentSVGWordIndex + ')').css('opacity',1);
+
+    }, 400);
+
+    $(document).on('click',function() {
+      clearInterval(wordScroll);
+    });
 
 });
 
+/*
 (function (mouseStopDelay) {
     var timeout;
     document.addEventListener('mousemove', function (e) {
@@ -103,12 +123,12 @@ $(document).ready(function() {
         }, mouseStopDelay);
     });
 }(250));
+*/
 
-// Example use
 document.getElementById('section-post-1').addEventListener('mousestop', function(e) {
     console.log('You stopped your mouse');
     console.log('Mouse coordinates are: ', e.detail.clientX, e.detail.clientY);
     $('#logo-animate').css('animation-play-state','paused');
     $('#section-post-1 .section-title a').css('visibility','hidden');
-    // The event will bubble up to parent elements.
+
 });
