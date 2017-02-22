@@ -5,12 +5,37 @@
   }
 };
 
+.section-post.n2col {
+  @include outer-container(100%);
+  padding-top: 0;
+  @include media($media-laptop){
+      width: 100%;
+      padding-right: 10vw;
+      padding-left: 0;
+      margin-right: calc(100vw / 12 * 1);
+      margin-left: calc(100vw / 12 * 1);
+      max-width: 1600px;
+  };
+
+  .col-main {
+    @include span-columns(7);
+    padding-right: 4rem;
+  };
+  .col-aside {
+    padding-top: 10rem;
+    padding-right: 5rem;
+    @include span-columns(5);
+
+  }
+}
+
 #section-post-1 {
-  background-color: $section-color-dark;
+  background-color: #101010; //$section-color-dark;
 
   .section-post {
     padding-top: 0;
     padding-bottom: 20%;
+
   }
   .section-background {
     position: fixed !important;
@@ -129,17 +154,28 @@
     padding-right: calc(10vw - 1rem);
     overflow: hidden;
 
+    @include media($media-tablet){
+        width: calc(100% / 12 * 10)
+    };
     @include media($media-laptop){
         width: calc(100% / 12 * 8);
         padding-right: 0
     };
 
     &.light-text {
-      color: $light-color-text
+      color: $light-color-text;
+      h4 {
+        color: $brand-color;
+        font: $section-subtitle-font-weight #{$section-subtitle-font-size * 1 } / #{$section-subtitle-font-size * 1  } $section-subtitle-font-family;
+      }
     };
 
     &.dark-text {
-      color: $dark-color-text
+      color: $dark-color-text;
+      h4 {
+        color: $brand-color-2;
+        font: $section-subtitle-font-weight #{$section-subtitle-font-size * 1 } / #{$section-subtitle-font-size * 1  } $section-subtitle-font-family;
+      }
     };
 
     h1.section-title {
@@ -155,7 +191,11 @@
         font: $section-title-font-weight #{$section-title-font-size * 2 } / #{$section-title-font-size * 1.15 * 2 } $section-title-font-family
       }
     };
+    h4 {
 
+      color: $brand-color-2;
+      font: $section-subtitle-font-weight #{$section-subtitle-font-size * 1 } / #{$section-subtitle-font-size * 1  } $section-subtitle-font-family;
+    }
     .link-cloud {
       padding: 2.0rem 0 2.0rem 0;
       color: $brand-color;
@@ -181,8 +221,24 @@
     }
 };
 
+  .svg-logo-zen-rake {
+    &.small svg {
+      height: 1rem;
+    };
+    svg {
+      height: 6rem;
+      .svg-path-sand {
+        fill: #000000;
+      };
+      .svg-path-rake {
+        fill: #000000;
+      }
+    }
+  };
+
+
 .svg-word {
-  fill: $brand-color-2;
+  fill: $brand-color;
   position: absolute;
   bottom: 20vh;
   width: 70vw;
