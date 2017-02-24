@@ -126,12 +126,6 @@
      height: 2.8rem
    }
    .masthead {
-     padding: 4rem
+     padding: 4rem 4rem 2rem 4rem;
    }
  }
-
-@include media($media-laptop){
-    .masthead {
-      padding: 6rem
-    }
-}
