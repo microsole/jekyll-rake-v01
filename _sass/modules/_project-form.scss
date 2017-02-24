@@ -1,0 +1,145 @@
+@mixin grid-item-columns($columns) {
+  width: (100% / 12) * $columns;
+}
+
+.rake-form-items {
+  list-style: none;
+  max-width: 1024px;
+  padding: 4rem 4rem 4rem 4rem;
+  border-radius: 4px;
+  background-color: #f0f0f0;
+  margin-left:  auto;
+  margin-right: auto;
+  margin-top: calc(-6vw);
+  $rake-grid-item-columns: 6;
+  $rake-grid-item-full-columns: 12;
+  $rake-grid-item-height: "auto";
+
+  @include clearfix;
+
+  .rake-form-item {
+    float: left;
+    height: $rake-grid-item-height;
+    outline: none;
+    overflow: hidden;
+    padding: 1rem 2rem 1rem 2rem;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+    width: 100%;
+
+    @include media($media-phone) {
+      @include grid-item-columns($rake-grid-item-columns);
+    }
+  }
+
+  .rake-form-item-full {
+    overflow: hidden;
+    padding: 1rem 2rem 1rem 2rem;
+    text-align: center;
+    @include media($media-phone) {
+      @include grid-item-columns($rake-grid-item-full-columns);
+    }
+
+  }
+
+}
+
+/* Forms
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="text"],
+input[type="tel"],
+input[type="url"],
+input[type="password"],
+textarea,
+select {
+  width: 100%;
+  height: 38px;
+  padding: 6px 10px; /* The 6px vertically centers text on FF, ignored by Webkit */
+  background-color: #fff;
+  border: 1px solid #D1D1D1;
+  border-radius: 4px;
+  box-shadow: none;
+  box-sizing: border-box;
+  font: inherit; }
+/* Removes awkward default styles on some inputs for iOS */
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="text"],
+input[type="tel"],
+input[type="url"],
+input[type="password"],
+textarea {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none; }
+textarea {
+  font: inherit;
+  width: 100%;
+  min-height: 65px;
+  padding-top: 6px;
+  padding-bottom: 6px; }
+input[type="email"]:focus,
+input[type="number"]:focus,
+input[type="search"]:focus,
+input[type="text"]:focus,
+input[type="tel"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
+textarea:focus,
+select:focus {
+  border: 1px solid #33C3F0;
+  outline: 0; }
+label,
+legend {
+  text-align: left;
+  display: block;
+  margin-bottom: .5rem;
+  font-weight: normal; }
+fieldset {
+  padding: 0;
+  border-width: 0; }
+input[type="checkbox"],
+input[type="radio"] {
+  display: inline; }
+label > .label-body {
+  display: inline-block;
+  margin-left: .5rem;
+  font-weight: normal; }
+
+  /* Buttons
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+  input[type="submit"],
+  input[type="reset"],
+  input[type="button"] {
+    display: inline-block;
+    height: 8rem;
+    padding: 0 8rem;
+    width: 100%;
+    color: #ffffff;
+    background-color: $brand-color-2;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: normal;
+    line-height: 5.8rem;
+    letter-spacing: .1rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    white-space: nowrap;
+    border-radius: 4px;
+    border: 1px solid $brand-color-2;
+    cursor: pointer;
+    box-sizing: border-box; }
+  input[type="submit"]:hover,
+  input[type="reset"]:hover,
+  input[type="button"]:hover,
+  input[type="submit"]:focus,
+  input[type="reset"]:focus,
+  input[type="button"]:focus {
+    color: #ffffff;
+    background-color: $brand-color-2-focus;
+    border-color: $brand-color-2-focus;  }
