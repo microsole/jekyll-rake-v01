@@ -1,7 +1,3 @@
-@mixin grid-item-columns($columns) {
-  width: (100% / 12) * $columns;
-}
-
 .rake-form-items {
   list-style: none;
   max-width: 1024px;

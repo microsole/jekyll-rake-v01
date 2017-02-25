@@ -2,9 +2,36 @@
 layout: default
 ---
 
-<div class="landing-page">
-  <div class="section-wrapper">
-    <h1>{{ page.title }}</h1>
-    <p>{{ page.preview }}</p>
+<div class="case-study-page">
+  <div class="section-wrapper" style="padding: 0 6rem 0 6rem;">
+    <section class="hero-section">
+      <div class="item full">
+        <h1>{{ page.title }}</h1>
+        <p class="subtitle">{{ page.preview }}</p>
+        <img class="featured-image" src="{{ page.featured-image }}" />
+      </div>
+    </section>
+    <section class="summary">
+      <div class="client">
+        <img class="logo-image" src="{{ page.logo-image }}" />
+        <h4>Client</h4>
+        <p>{{ page.client-name }}</p>
+        <h4>Scope of Work</h4>
+        <p>
+          {% for category in page.categories %}
+            {{ category }}<br/>
+          {% endfor %}
+        </p>
+      </div>
+      <div class="main">
+        <h2>{{ page.preview }}</h2>
+      </div>
+      <div class="share">
+        <a href="https://facebook.com/">{% include icon-facebook.svg %}</a>
+        <a href="https://facebook.com/">{% include icon-google-plus.svg %}</a>
+        <a href="https://facebook.com/">{% include icon-linkedin.svg %}</a>
+        <a href="https://facebook.com/">{% include icon-twitter.svg %}</a>
+      </div>
+    </section>
   </div>
 </div>

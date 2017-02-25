@@ -6,6 +6,9 @@ $media-tablet: 960px;
 $media-laptop: 1366px;
 $media-desktop: 1660px;
 
+@mixin media($point) {
+  @media screen and (min-width: $point) { @content; }
+}
 /**  Using Neat mixins
 
 @mixin breakpoint($point) {

@@ -1,0 +1,25 @@
+/**
+ * Module Hero Section
+ */
+
+section.hero-section {
+  padding: 4rem 0rem 4rem 0rem;
+  margin-left:  auto;
+  margin-right: auto;
+  margin-top: 5rem;
+
+  @include clearfix;
+
+  .item.full {
+    overflow: hidden;
+    padding: 2rem;
+    text-align: center;
+    @include grid-item-columns(12);
+  };
+
+  img.featured-image {
+    margin: 2rem 0 2rem 0;
+    width: 100%;
+    max-width: $media-laptop;
+  };
+}

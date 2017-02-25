@@ -1,0 +1,103 @@
+/**
+ * Module Case Study
+ */
+
+.case-study-page section.summary {
+  padding: 4rem 0 4rem 0;
+  margin-left:  auto;
+  margin-right: auto;
+  margin-top: 5rem;
+  max-width: $media-laptop;
+  @include grid-container;
+  //@include grid-visual;
+  @include clearfix;
+
+  .client {
+    overflow: hidden;
+    padding: 2rem 2rem 2rem 0;
+    text-align: left;
+    @include grid-column(3);
+    h4 {
+      color: $brand-color-2;
+      font: #{$section-subtitle-font-weight * 2} #{$section-subtitle-font-size * 0.8  } / #{$section-subtitle-font-size * 1.5 * 0.8 } $section-subtitle-font-family;
+      margin: 2rem 0 0 0;
+      text-transform: uppercase;
+    };
+    p {
+      line-height: #{$base-line-height * 1.5}
+    }
+  };
+
+  .main {
+    overflow: hidden;
+    padding: 2rem;
+    text-align: left;
+    @include grid-column(7);
+  };
+
+  .share {
+    overflow: hidden;
+    padding: 2rem;
+    text-align: right;
+    @include grid-column(2);
+  };
+
+  img.logo-image {
+    width: auto;
+    max-width: 20rem;
+    height: auto;
+    max-height: 10rem;
+  };
+};
+
+.case-study-page {
+  h1 {
+    font: $section-title-font-weight #{$section-title-font-size  } / #{$section-title-font-size * 1.15  } $section-title-font-family;
+    @include media($media-tablet) {
+      font: $section-title-font-weight #{$section-title-font-size * 1.25 } / #{$section-title-font-size * 1.15 * 1.5 } $section-title-font-family
+    };
+    @include media($media-laptop) {
+      font: $section-title-font-weight #{$section-title-font-size * 1.5 } / #{$section-title-font-size * 1.15 * 2 } $section-title-font-family
+    }
+  };
+  h2 {
+    font: $section-title-font-weight #{$section-title-font-size * .75  } / #{$section-title-font-size * 1.15 *.75 } $section-title-font-family;
+    @include media($media-tablet) {
+      font: $section-title-font-weight #{$section-title-font-size * .8 } / #{$section-title-font-size * 1.15 * 1 } $section-title-font-family
+    };
+    @include media($media-laptop) {
+      font: $section-title-font-weight #{$section-title-font-size * 1 } / #{$section-title-font-size * 1.15 * 1.1 } $section-title-font-family
+    }
+  };
+  p.subtitle {
+    font: $section-subtitle-font-weight #{$section-subtitle-font-size * 0.75 } / #{$section-subtitle-font-size * 1.15 * 0.75  } $section-subtitle-font-family;
+    @include media($media-tablet) {
+      font: $section-subtitle-font-weight #{$section-subtitle-font-size * 0.8 } / #{$section-subtitle-font-size * 1.15 * 0.8 } $section-subtitle-font-family
+    };
+    @include media($media-laptop) {
+      font: $section-subtitle-font-weight #{$section-subtitle-font-size * 1.1 } / #{$section-subtitle-font-size * 1.15 * 1.1 } $section-subtitle-font-family
+    }
+  };
+
+  .share {
+    a {
+      height: 5.0rem;
+      width: 5.0rem;
+      text-align: center;
+      display: block;
+      position: relative;
+      background-color: $brand-color-2;
+      overflow: hidden;
+      margin: 0 1rem 2rem 1rem;
+      left: 50%;
+      transform: translateX(-50%);
+      .svg-social-icon {
+        fill: #ffffff;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+}

@@ -6,7 +6,7 @@
 };
 
 .section-post.n2col {
-  @include outer-container(100%);
+  @include grid-container(100%);
   padding-top: 0;
   @include media($media-laptop){
       width: 100%;
@@ -18,13 +18,13 @@
   };
 
   .col-main {
-    @include span-columns(7);
+    @include grid-column(7);
     padding-right: 4rem;
   };
   .col-aside {
     padding-top: 10rem;
     padding-right: 5rem;
-    @include span-columns(5);
+    @include grid-column(5);
 
   }
 }
@@ -122,14 +122,14 @@
 }
 
 .section-feed {
-  @include outer-container(80%);
+  @include grid-container(80%);
 
   .tile {
-    @include omega(3n)
+    
   }
 
   .tile.large {
-    @include span-columns(6);
+    @include grid-column(6);
     &.square {
       height: calc(80vw / 12 * 6)
     };
@@ -137,7 +137,7 @@
     background-color: $brand-color
   };
   .tile.small {
-    @include span-columns(3 of 6);
+    @include grid-column(3 of 6);
     &.square {
       height: calc(80vw / 12 * 3)
     }
