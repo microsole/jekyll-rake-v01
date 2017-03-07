@@ -1,0 +1,47 @@
+---
+layout: default
+---
+<div class="case-study-page">
+  <div class="section-wrapper">
+    <section class="hero-section">
+      <div class="item full">
+        <h1>{{ page.title }}</h1>
+      </div>
+    </section>
+  </div>
+  <div class="section-wrapper light">
+    <section class="summary">
+      <div class="client">
+        <img class="logo-image" src="https://placeimg.com/80/80/people" />
+        <h4>{{ page.author }}</h4>
+        <p><em>Author Title</em></p>
+        <h4>{{ page.date | date: "%B %Y"}}</h4>
+        <h4>Categories</h4>
+        <p>
+          {% for category in page.categories %}
+            {{ category }}<br/>
+          {% endfor %}
+        </p>
+        <h4>Tags</h4>
+        <p>
+          {% for tag in page.tags %}
+            {{ tag }}<br/>
+          {% endfor %}
+        </p>
+      </div>
+      <div class="main">
+        <h2>{{ page.subtitle }}</h2>
+        <img class="featured-image" src="https://placeimg.com/1200/800/tech" />
+        {{ content }}
+        {% include disqus.html %}
+      </div>
+      <div class="share">
+        <a href="https://facebook.com/">{% include icon-facebook.svg %}</a>
+        <a href="https://facebook.com/">{% include icon-google-plus.svg %}</a>
+        <a href="https://facebook.com/">{% include icon-linkedin.svg %}</a>
+        <a href="https://facebook.com/">{% include icon-twitter.svg %}</a>
+      </div>
+    </section>
+  </div>
+</div>
+<script id="dsq-count-scr" src="//rakedigitalco.disqus.com/count.js" async></script>

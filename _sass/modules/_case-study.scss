@@ -3,7 +3,11 @@
  */
 .case-study-page .section-wrapper {
   padding: 0 6rem 0 6rem;
+  &.light {
+    background-color: $section-color-light
+  }
 };
+
 .case-study-page .section-wrapper.gallery {
   padding: 0 6rem 0 6rem;
 

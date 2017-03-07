@@ -1,20 +1,23 @@
 ---
-author: ceversole
+author: "Craig Eversole"
 comments: true
-date: 2015-04-17 17:50:11+00:00
-layout: post
-link: https://www.managementstack.com/fluff-matters-3-simple-ways-to-help-win-customers/
-slug: fluff-matters-3-simple-ways-to-help-win-customers
-title: 'Fluff Matters: 3 Simple Ways to Help Win Customers'
-wordpress_id: 16639
+layout: article
+title: "Fluff Matters"
+subtitle: "3 simple ways to help win customers"
+permalink: "/articles/fluff-matters-3-simple-ways-to-help-win-customers"
+date: 2015-04-17 17:50:11 -0500
+
+featured-image: "https://placeimg.com/1200/800/tech"
+
 categories:
-- Corporate Culture
-- Marketing
+  - "Corporate Culture"
+  - "Marketing"
+
 tags:
-- Branding
-- Cognitive Bias
-- Culture
-- Public Relations
+  - "Branding"
+  - "Cognitive Bias"
+  - "Culture"
+  - "Public Relations"
 ---
 
 The word fluff sometimes conjures negative feelings about marketing materials that waste your valuable time by showering you with irrelevant, insignificant, superficial information disguised as expertise and analysis. That’s not the kind of fluff I’m talking about.
@@ -29,7 +32,7 @@ Here are three simple things you can do to take advantage of the cognitive bias 
 
 
 
-	
+
   1. **Eliminate the noise**
 
 
@@ -42,7 +45,7 @@ Don’t be afraid of white spaces. People are constantly bombarded with stimuli 
 
 
 
-	
+
   2. **Don’t forget about the font**
 
 
@@ -55,7 +58,7 @@ The fonts you use in documents and on your website should match your company’s
 
 
 
-	
+
   3. **Keep it consistent**
 
 
