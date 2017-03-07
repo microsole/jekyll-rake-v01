@@ -89,6 +89,7 @@ $(document).ready(function() {
 
     });
 
+    $('#masonry-work-gallery').masonry();
 /*
     $('#section-post-1').mousemove(function(event) {
         $('#logo-animate').css('animation','stroke-offset 6s linear infinite');

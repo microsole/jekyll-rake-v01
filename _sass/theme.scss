@@ -1,11 +1,12 @@
 // Our variables
-$base-font-family: Helvetica, Arial, sans-serif !default;
+$base-font-family: "freight-sans-pro-light", sans-serif !default;
+$base-font-family-serif: Georgia, serif;
 $base-font-size:   1.6rem !default;
 $base-font-weight: 400 !default;
 $small-font-size:  $base-font-size * 0.875 !default;
 $base-line-height: 1.5 !default;
 
-$section-font-family: Helvetica, Arial, sans-serif;
+$section-font-family: "freight-sans-pro-light", sans-serif;
 $section-font-size:   1.6rem;
 $section-font-weight: 400;
 
@@ -13,7 +14,7 @@ $section-title-font-family: Georgia, serif;
 $section-title-font-size:   4.5rem;
 $section-title-font-weight: 400;
 
-$section-subtitle-font-family: Helvetica, sans-serif;
+$section-subtitle-font-family: "freight-sans-pro-light", sans-serif;
 $section-subtitle-font-size:   1.8rem;
 $section-subtitle-font-weight: 300;
 
@@ -47,6 +48,26 @@ $grey-color-dark:  darken($grey-color, 25%);
 $content-width:    800px;
 $on-palm:          600px;
 $on-laptop:        800px;
+
+// Declare fonts
+
+@font-face {
+    font-family: 'freight-sans-pro-light';
+    src: url('/assets/fonts/freight-sans-light-webfont.woff2') format('woff2'),
+         url('/assets/fonts/freight-sans-light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'freight-sans-pro-bold';
+    src: url('/assets/fonts/freight-sans-bold-webfont.woff2') format('woff2'),
+         url('/assets/fonts/freight-sans-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
 
 // Import partials.
 @import

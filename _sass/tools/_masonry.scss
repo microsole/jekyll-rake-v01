@@ -1,6 +1,7 @@
 .masonry {
   list-style-type: none;
-  margin: -5vw 10vw 0 10vw;
+  margin-left: 0;
+  //margin: -5vw 10vw 0 10vw;
   .tile-layout,
   .tile {
     width: 100vw;
@@ -10,26 +11,38 @@
     }
     @include media($media-tablet) {
       width: 40vw;
-      height: 40vh;
-      &.half {
-        width: 80vw;
-        height: 40vh;
-      }
-      &.full {
-        width: 80vw;
-        height: 50vw;
-      }
-    };
-    @include media($media-laptop) {
-      width: 20vw;
-      height: 20vw;
+      height: calc(40vw * 9 / 8);
       &.half {
         width: 40vw;
-        height: 40vw;
+        height: calc(40vw * 9 / 8);
+      };
+      &.half-wide {
+        width: 40vw;
+        height: calc(40vw * 9 / 16);
       };
       &.full {
         width: 80vw;
-        height: 50vw;
+        height: calc(80vw * 9 / 16);
+      }
+    };
+    @include media($media-laptop) {
+      width: 25%;
+      height: 25%;
+      //height: calc(20vw * 9 / 8);
+      &.half {
+        width: 50%;
+      
+        //height: calc(40vw * 9 / 8);
+      };
+      &.half-wide {
+        width: 50%;
+
+        //height: calc(40vw * 9 / 16);
+      };
+      &.full {
+        width: 100%;
+
+        //height: calc(80vw * 9 / 16);
       }
     };
   };

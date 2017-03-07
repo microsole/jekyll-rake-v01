@@ -9,6 +9,7 @@ date:   2016-03-06 12:00:00 -0500
 featured-image: "https://placeimg.com/1200/800/people"
 tile-tint: tint-dark
 tile-color: light-text
+tile-size: half-wide
 
 categories:
   - "front end development"

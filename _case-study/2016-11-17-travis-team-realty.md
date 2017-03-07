@@ -6,7 +6,7 @@ permalink: "/case-study/travis-team-realty-website"
 date:   2016-11-17 12:00:00 -0500
 
 featured-image: "/assets/img/hero-surface.jpg"
-tile-size: half
+tile-size: half-wide
 tile-tint: tint-light
 tile-color: dark-text
 

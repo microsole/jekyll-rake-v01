@@ -1,0 +1,8 @@
+<ul class="masonry" id="masonry-work-gallery" data-masonry='{ "columnWidth": ".tile-layout", "itemSelector": ".tile", "percentPosition": "true" }'>
+  <li class="tile-layout"></li>
+  {% for gallery-image in page.gallery-images %}
+    <li class="tile {{ gallery-image.image-size }}">
+        <div class="tile-background bottom wide" style="background-image:url('{{ gallery-image.image-url }}');"></div>
+    </li>
+  {% endfor %}
+</ul>

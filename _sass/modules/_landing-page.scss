@@ -67,7 +67,8 @@
     }
   };
 };
-.section.brand-color {
+
+.section.brand-color, .gallery.brand-color {
   background: linear-gradient(
     to bottom,
     $brand-color 0%,
@@ -76,7 +77,7 @@
     $header-color-light 100%
   )
 };
-.section.brand-color-2 {
+.section.brand-color-2, .gallery.brand-color-2 {
   background: linear-gradient(
     to bottom,
     $brand-color-2 0%,
@@ -84,6 +85,12 @@
     $header-color-light 50%,
     $header-color-light 100%
   )
+};
+#masonry-work {
+  margin: -5vw 10vw 0 10vw;
+};
+#masonry-articles {
+  margin: -5vw 10vw 0 10vw;
 };
 .section-background {
   position: absolute;
@@ -125,7 +132,7 @@
   @include grid-container(80%);
 
   .tile {
-    
+
   }
 
   .tile.large {

@@ -1,8 +1,21 @@
 /**
  * Module Case Study
  */
+.case-study-page .section-wrapper {
+  padding: 0 6rem 0 6rem;
+};
+.case-study-page .section-wrapper.gallery {
+  padding: 0 6rem 0 6rem;
 
-.case-study-page section.summary {
+};
+.case-study-page section.gallery {
+  margin-left:  auto;
+  margin-right: auto;
+  padding: 4rem 0 4rem 0;
+  max-width: $media-laptop;
+};
+
+.case-study-page section.summary, .case-study-page section.content {
   padding: 4rem 0 4rem 0;
   margin-left:  auto;
   margin-right: auto;
@@ -19,7 +32,7 @@
     @include grid-column(3);
     h4 {
       color: $brand-color-2;
-      font: #{$section-subtitle-font-weight * 2} #{$section-subtitle-font-size * 0.8  } / #{$section-subtitle-font-size * 1.5 * 0.8 } $section-subtitle-font-family;
+      font: #{$section-subtitle-font-weight * 2} #{$section-subtitle-font-size * 1  } / #{$section-subtitle-font-size * 1.5 * 1 } "freight-sans-pro-bold";
       margin: 2rem 0 0 0;
       text-transform: uppercase;
     };
@@ -42,9 +55,25 @@
     @include grid-column(2);
   };
 
+  .testimonial {
+    overflow: hidden;
+    padding: 2rem;
+    text-align: center;
+    @include grid-column(8);
+    @include grid-push(2);
+  };
+
+  .content {
+    overflow: hidden;
+    padding: 2rem;
+    text-align: left;
+    @include grid-column(8);
+    @include grid-push(2);
+  };
+
   img.logo-image {
     width: auto;
-    max-width: 20rem;
+    max-width: 26rem;
     height: auto;
     max-height: 10rem;
   };
@@ -68,6 +97,17 @@
     @include media($media-laptop) {
       font: $section-title-font-weight #{$section-title-font-size * 1 } / #{$section-title-font-size * 1.15 * 1.1 } $section-title-font-family
     }
+    margin-bottom: 4rem;
+  };
+  h3 {
+    font: #{$section-subtitle-font-weight * 1.75} #{$section-subtitle-font-size * 0.75 } / #{$section-subtitle-font-size * 1.15 * 0.75  } $section-subtitle-font-family;
+    @include media($media-tablet) {
+      font: #{$section-subtitle-font-weight * 1.75} #{$section-subtitle-font-size * 0.8 } / #{$section-subtitle-font-size * 1.15 * 0.8 } $section-subtitle-font-family
+    };
+    @include media($media-laptop) {
+      font: 700 #{$section-subtitle-font-size * 1.1 } / #{$section-subtitle-font-size * 1.15 * 1.1 } "freight-sans-pro-bold"
+    };
+
   };
   p.subtitle {
     font: $section-subtitle-font-weight #{$section-subtitle-font-size * 0.75 } / #{$section-subtitle-font-size * 1.15 * 0.75  } $section-subtitle-font-family;
@@ -76,8 +116,15 @@
     };
     @include media($media-laptop) {
       font: $section-subtitle-font-weight #{$section-subtitle-font-size * 1.1 } / #{$section-subtitle-font-size * 1.15 * 1.1 } $section-subtitle-font-family
-    }
+    };
+
   };
+  p {
+    line-height: #{$base-line-height * 1.5 };
+    font-family: $base-font-family;
+    font-size: $base-font-size * 1.25;
+
+  }
 
   .share {
     a {

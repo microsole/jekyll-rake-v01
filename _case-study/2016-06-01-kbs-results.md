@@ -8,6 +8,7 @@ date:   2016-06-01 12:00:00 -0500
 featured-image: "/assets/img/journey-driven-consulting.jpg"
 tile-tint: tint-dark
 tile-color: light-text
+tile-size: half-wide
 
 categories:
   - "website design"
