@@ -33,7 +33,8 @@ layout: default
         <h2>{{ page.subtitle }}</h2>
         <img class="featured-image" src="https://placeimg.com/1200/800/tech" />
         {{ content }}
-        {% include disqus.html %}
+        <div class="divspace"></div>
+        {% include facebook_comments.html %}
       </div>
       <div class="share">
         <a href="https://facebook.com/">{% include icon-facebook.svg %}</a>
